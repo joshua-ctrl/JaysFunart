@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    background-image: url(Jay's%20Fun%20Art.gif);
+}
+
+#canvas{
+    position: relative;
+}
+
+.control_btns{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    z-index: 100;
+}
+
+.control_btns button{
+    height: 40px;
+    width: 40px;
+    cursor: grabbing;
+    border-radius: 5px;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    font-size: 1.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0.1px 4px 8px 2px rgba(0, 0, 0, 0.1);
+}
+
+.control_btns button:not(:first-child){
+    background: #fff;
+}
+
+
+#colorSelectBnt{
+    background: black;
+    color: #fff;
+}
+
+.color_selector,.brush_sizes{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    transform: translateX(20em);
+    transition-duration: 0.5s;
+    box-shadow: 0.1px 4px 8px 2px rgba(0, 0, 0, 0.1);
+}
+
+.brush_sizes{
+    bottom: 5.5em;
+}
+
+.color_selector button{
+    height: 40px;
+    width: 40px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.color_selector button:hover{
+    transform: translateY(-5px);
+}
+
+#cancel_color_palette,#cancel_brush_palette{
+    position: absolute;
+    background: #fff;
+    top: 0;
+    right: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transform: translate(10px,-10px);
+    box-shadow: 0.1px 4px 8px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+.brush_sizes button{
+    background: #fff;
+    height: 15px;
+    width: 15px;
+    outline: none;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 0.1px 4px 8px 2px rgba(0, 0, 0, 0.1);
+}
+
+.brush_sizes button:hover{
+    transform: translateY(-5px);
+}
+
+.brush_sizes button:nth-child(2){
+    height: 18px;
+    width: 18px;
+}
+
+.brush_sizes button:nth-child(3){
+    height: 21px;
+    width: 21px;
+}
+
+.brush_sizes button:nth-child(4){
+    height: 24px;
+    width: 24px;
+}
+
+.brush_sizes button:nth-child(5){
+    height: 27px;
+    width: 27px;
+}
+
+#cancel_brush_palette{
+    border: none;
+}

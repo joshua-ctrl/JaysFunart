@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Drawing Board -HTML Canvas</title>
+</head>
+
+<body onload="init()">
+    <canvas id="canvas"></canvas>
+    <div class="control_btns">
+        <button id="colorSelectBnt"><i class='bx bxs-palette'></i></button>
+        <button id="brushSelectorBtn"><i class='bx bxs-brush' ></i></button>
+        <button id="white" onclick="ChangeColor(this)"><i class='bx bxs-eraser'></i></button>
+        <button onclick="erase()"><i class='bx bx-x'></i></button>
+        <button id="SaveImgBtn" onclick="saveImage()"><i class='bx bxs-download'></i></button>
+    </div>
+
+    <div class="color_selector">
+        <button id="blue" style="background:blue;" onclick="ChangeColor(this)"></button>
+        <button id="red" style="background:red;" onclick="ChangeColor(this)"></button>
+        <button id="green" style="background:green;" onclick="ChangeColor(this)"></button>
+        <button id="yellow" style="background:yellow;" onclick="ChangeColor(this)"></button>
+        <button id="orange" style="background:orange;" onclick="ChangeColor(this)"></button>
+        <button id="black" style="background:black;" onclick="ChangeColor(this)"></button>
+
+        <button id="cancel_color_palette"><i class='bx bx-x'></i></button>
+    </div>
+
+    <div class="brush_sizes">
+        <button id="2" onclick="ChangeBrushSize(this)"></button>
+        <button id="4" onclick="ChangeBrushSize(this)"></button>
+        <button id="6" onclick="ChangeBrushSize(this)"></button>
+        <button id="8" onclick="ChangeBrushSize(this)"></button>
+        <button id="10" onclick="ChangeBrushSize(this)"></button>
+
+        <button id="cancel_brush_palette"><i class='bx bx-x'></i></button>
+    </div>
+
+
+    <img id="DrawnImage" style="position:absolute;top:10%;left:52%;" style="display:none;">
+
+    <!-- javascript -->
+    <script src="main.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
